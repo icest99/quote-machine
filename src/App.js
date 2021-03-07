@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import "./app.css";
 import {
   Button,
   Grid,
@@ -8,6 +9,7 @@ import {
   Tooltip,
   Divider,
   TextField,
+  Typography,
   Box,
   Link,
   Position,
@@ -179,16 +181,17 @@ function App() {
         justify="center"
         alignContent="center"
         style={{ height: "100vh" }}
-        maxWidth="35vw"
-        minWidth="35vw"
       >
-        <Box minWidth="35vw" maxWidth="35vw">
-          <Paper className={classes.paper}>
+        <Paper className={classes.paper}>
+          <Grid
+            item
+            className="quote-box"
+            // style={{ minWidth: "50vw", maxWidth: "50vw" }}
+          >
             <div
               id="text"
               style={{
                 color: `${colors[randomColor]}`,
-                fontSize: "1.3rem",
                 transition: "all .5s ease",
                 WebkitTransition: "all .5s ease",
                 MozTransition: "all .5s ease",
@@ -237,11 +240,11 @@ function App() {
                   color: "white",
                 }}
               >
-                New QUote
+                New Quote
               </Button>
             </Grid>
-          </Paper>
-        </Box>
+          </Grid>
+        </Paper>
       </Grid>
     </div>
   );
